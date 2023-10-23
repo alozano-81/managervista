@@ -25,44 +25,62 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 //import { NgSelectModule } from '@ng-select/ng-select';
 //import { DataTablesModule } from 'angular-datatables';
 //import { NgxMaskModule } from 'ngx-mask';
-//import { NgxSpinnerModule } from "ngx-spinner";
-import { ToastrModule } from 'ngx-toastr';
+import { NgxSpinnerModule } from "ngx-spinner";
+//import { ToastrModule } from 'ngx-toastr';
 
 
 import { MatListModule } from '@angular/material/list';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
-//import { SpinerComponent } from './components/spiner/spiner.component';
+import { SpinerComponent } from './components/spiner/spiner.component';
 import { TemplateComponent } from './components/template/template.component';
+
 import { GestionLoginComponent } from './gestion-login/gestion-login.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
-import { ComponentsModule } from './components/material/src/app/components/components.module';
-
 @NgModule({
   declarations: [
     TemplateComponent,
     PagesComponent,
     GestionLoginComponent,
-    //GenerarTurnosComponent,
     //SpinerComponent
   ],
   imports: [
     CommonModule,
+    //ComponentsModule,
     PagesRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
     MatCardModule,
     MatSelectModule,
+    MatSelectModule,
     MatFormFieldModule,
     MatGridListModule,
     MatCheckboxModule,
     MatButtonToggleModule,
     MatDatepickerModule,
+    MatNativeDateModule,
+    MatDividerModule,
+    HttpClientModule,
+    //DataTablesModule,
+    //ToastrModule.forRoot(),
     MatIconModule,
-    ToastrModule.forRoot(),
-
+    MatTooltipModule,
+    MatBottomSheetModule,
+    MatDialogModule,
+    MatRadioModule,
+    MatButtonModule,
+    MatProgressSpinnerModule,
+    NgxSpinnerModule,
+    //NgxMaskModule.forRoot(),
+    MatProgressBarModule,
+    MatExpansionModule,
+    MatTabsModule,
+    MatSlideToggleModule,
+    MatListModule,
+    MatDatepickerModule,
+    MatToolbarModule
   ],
   exports: [TemplateComponent],
 })

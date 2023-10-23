@@ -7,7 +7,7 @@ import { AppRoutingModule, appRoutingProviders } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagesRoutingModule } from './pages/pages-routing.module';
 import { PagesModule } from './pages/pages.module';
-
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -19,7 +19,8 @@ import { PagesModule } from './pages/pages.module';
     PagesRoutingModule,
     BrowserAnimationsModule,
     MatExpansionModule,
-    PagesModule
+    PagesModule,
+    NgxSpinnerModule
 
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
