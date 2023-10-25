@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
+///import { RouterModule, Routes } from '@angular/router';
 import { RouterModule, Routes } from '@angular/router';
+
+import { GestionClientesComponent } from './gestion-clientes/gestion-clientes.component';
 import { GestionLoginComponent } from './gestion-login/gestion-login.component';
 import { PagesComponent } from './pages.component';
 
@@ -14,6 +17,11 @@ const routes: Routes = [
       {
         path: 'login',
         component: GestionLoginComponent,
+        data: { showRootComponents: true}
+      },
+      {
+        path: 'gestion-clientes',
+        component: GestionClientesComponent,
         data: { showRootComponents: true}
       }
       //{ path: '', redirectTo: '/inicio', pathMatch: 'full' },

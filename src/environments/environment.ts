@@ -4,28 +4,19 @@
 
 export const environment = {
   production: false,
-  urlApiProveedorServicio2: 'http://localhost:8088/ProveedoresServicio/proveedores/v2/',
-  urlToken: 'http://localhost:8088/ProveedoresServicio/token/generar',
-  urlTokenV2: 'http://localhost:8088/ProveedoresServicio/token/validar-token',
-  urlApiGeneralOrganizacion: 'http://localhost:8083/GeneralOrganizacion',
- //urlAutenticacion:'https://pruebas.dinissan.com.co/autenticacion-sigru/general/autenticacion/loginSigru',
- urlDownloadFiles:'http://localhost:38083/visualizador/archivo/descargar/',
+  urlApi: 'http://localhost:8082/api/pruebaMB/entrar',
 
-  //urlApiProveedorServicio2: '/ProveedoresServicio/proveedores/v2/',
-  //urlToken:'/ProveedoresServicio/token/generar',
-  //urlTokenV2: '/ProveedoresServicio/token/validar-token',
-  //urlApiGeneralOrganizacion: '/GeneralOrganizacion',
-  urlAutenticacion:'/autenticacion-sigru/general/autenticacion/loginSigru',
-  //urlDownloadFiles:'/descargar-archivos-proveedor/visualizador/archivo/descargar/',
+  urlApiClientes: 'http://localhost:8082/api/pruebaMB/get-all-clientes',
 
-  // proveedores:Servicios
-  path: '/ProveedoresServicio',
-
-
+  urlApiLogin: 'http://localhost:8082/api/pruebaMB/validar-ingreso',
+  
   //etiquetas formularios
   usuario: 'Usuario',
-  lbl_pass: 'Ingrese su contraseña'
+  lbl_pass: 'Ingrese su contraseña',
   //msn
 
-  //
+
+  //credenciales
+  user: 'admin',
+  pass: 'admin'
 }

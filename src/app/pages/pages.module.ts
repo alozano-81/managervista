@@ -25,34 +25,37 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 //import { NgSelectModule } from '@ng-select/ng-select';
 //import { DataTablesModule } from 'angular-datatables';
 //import { NgxMaskModule } from 'ngx-mask';
-//import { NgxSpinnerModule } from "ngx-spinner";
+import { NgxSpinnerModule } from "ngx-spinner";
 //import { ToastrModule } from 'ngx-toastr';
 
 
 import { MatListModule } from '@angular/material/list';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import { ComponentsModule } from './components/material/src/app/components/components.module';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import { TemplateComponent } from './components/template/template.component';
+
+import { GestionClientesComponent } from './gestion-clientes/gestion-clientes.component';
+import { GestionLoginComponent } from './gestion-login/gestion-login.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
-import { GestionLoginComponent } from './gestion-login/gestion-login.component';
 @NgModule({
   declarations: [
     TemplateComponent,
     PagesComponent,
     GestionLoginComponent,
-   // SpinerComponent
+    GestionClientesComponent,
+    //SpinerComponent
   ],
   imports: [
     CommonModule,
-    ComponentsModule,
+    //ComponentsModule,
     PagesRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
     MatCardModule,
     MatSelectModule,
-    //NgSelectModule,
+    MatSelectModule,
     MatFormFieldModule,
     MatGridListModule,
     MatCheckboxModule,
@@ -70,14 +73,15 @@ import { GestionLoginComponent } from './gestion-login/gestion-login.component';
     MatRadioModule,
     MatButtonModule,
     MatProgressSpinnerModule,
-    //NgxSpinnerModule,
+    NgxSpinnerModule,
     //NgxMaskModule.forRoot(),
     MatProgressBarModule,
     MatExpansionModule,
     MatTabsModule,
     MatSlideToggleModule,
     MatListModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatToolbarModule
   ],
   exports: [TemplateComponent],
 })
