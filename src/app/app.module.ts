@@ -1,15 +1,13 @@
-import { NgModule } from '@angular/core';
+import { APP_BASE_HREF } from '@angular/common';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatDividerModule } from '@angular/material/divider';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
-import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AppRoutingModule, appRoutingProviders } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PagesRoutingModule } from './pages/pages-routing.module';
+import { PagesModule } from './pages/pages.module';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 @NgModule({
   declarations: [
@@ -18,17 +16,18 @@ import { AppComponent } from './app.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatIconModule,
-    MatDividerModule,
-    MatButtonModule,
-    MatCardModule,
-    MatSelectModule,
-    MatInputModule,
-    MatFormFieldModule,
-
+    PagesRoutingModule,
+    BrowserAnimationsModule,
+    MatExpansionModule,
+    PagesModule,
+    NgxSpinnerModule
 
   ],
-  providers: [],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  providers: [
+    appRoutingProviders,
+    { provide : APP_BASE_HREF, useValue: '/gestion'}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

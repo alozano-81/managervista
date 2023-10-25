@@ -6,13 +6,6 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'managervista';
-  prueba:string="e";
-  hide:any = true;
 
-
-  lbl_login:string="Iniciar sesion";
-  public lbl_usuario : string = environment.usuario;
-  public lbl_contrasena : string = environment.lbl_pass;
 
 }

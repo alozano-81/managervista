@@ -1,45 +1,21 @@
-<div class="example-container">
-
-
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>{{lbl_login}}</mat-card-title>
-    <mat-card-subtitle>Start</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-actions>
-    <div class="row">
-      <div class="col contenedor">
-
-        <mat-form-field>
-          <mat-label>{{lbl_usuario}}</mat-label>
-          <input matInput>
-        </mat-form-field>
-        <mat-form-field>
-          <mat-label>{{lbl_contrasena}}</mat-label>
-          <input matInput [type]="hide ? 'password' : 'text'">
-          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
-            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-          </button>
-        </mat-form-field>
-
-      </div>
-      <div class="col">
-        <button mat-button>LIKE</button>
-        <button mat-button>SHARE</button>
-      </div>
+<div class="">
+  <div class="" data-color="" data-background-color="" data-image="">
+    <div class="" style=""></div>
+  </div>
+  <div class="">
+    <div>
+      <router-outlet>
+        <!--ngx-spinner
+          bdColor="rgba(0, 0, 0, 0.8)"
+          size="medium"
+          color="#fff"
+          type="ball-fall"
+          [fullScreen]="true"
+        >
+          <p style="color: white">Cargando...</p>
+        </ngx-spinner-->
+      </router-outlet>
     </div>
-
-  </mat-card-actions>
-</mat-card>
-<br>
-<mat-card>
-  <mat-card-header>
-    <mat-card-title>Actions Buttons</mat-card-title>
-    <mat-card-subtitle>End</mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-actions align="end">
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
-</mat-card>
+  </div>
 </div>
+
