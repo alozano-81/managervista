@@ -38,11 +38,13 @@ import { TemplateComponent } from './components/template/template.component';
 import { GestionLoginComponent } from './gestion-login/gestion-login.component';
 import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
+import { GestionClientesComponent } from './gestion-clientes/gestion-clientes.component';
 @NgModule({
   declarations: [
     TemplateComponent,
     PagesComponent,
     GestionLoginComponent,
+    GestionClientesComponent,
     //SpinerComponent
   ],
   imports: [

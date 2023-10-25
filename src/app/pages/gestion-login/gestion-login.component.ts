@@ -45,9 +45,21 @@ export class GestionLoginComponent implements OnInit{
     console.log(this.formLogin);
     console.log( this.formLogin.get('user').value);
     console.log( this.formLogin.get('pass').value);
+
+    this.serviceLogin.validarLogin(this.formLogin.get('user').value, this.formLogin.get('pass').value).subscribe(
+
+      (resu:any)=>{
+        console.log('Entra aquí')
+        console.log(resu);
+      },
+      (error)=>{
+        console.log('Entra aquí x2')
+        console.log(error);
+      }
+    );
     if(this.formLogin.get('user').value == environment.user && this.formLogin.get('pass').value == environment.pass){
       console.log("Algo cumple");
-      this.router.navigate(['/', 'generar-tabla']);
+      this.router.navigate(['/', 'gestion-clientes']);
       localStorage.setItem('user', this.formLogin.get('user').value);
     }else{
       console.log("Algo")

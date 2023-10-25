@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { GestionLoginComponent } from './gestion-login/gestion-login.component';
 import { PagesComponent } from './pages.component';
+import { GestionClientesComponent } from './gestion-clientes/gestion-clientes.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,11 @@ const routes: Routes = [
       {
         path: 'login',
         component: GestionLoginComponent,
+        data: { showRootComponents: true}
+      },
+      {
+        path: 'gestion-clientes',
+        component: GestionClientesComponent,
         data: { showRootComponents: true}
       }
       //{ path: '', redirectTo: '/inicio', pathMatch: 'full' },
