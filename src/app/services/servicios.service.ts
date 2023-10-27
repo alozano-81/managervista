@@ -13,6 +13,7 @@ export class ServiciosService {
 
   comercios: any[] = [];
   clientes: any[] = [];
+  login:any[] = [];
 
   constructor(
     private formularioNuevo: FormBuilder,
@@ -56,17 +57,16 @@ export class ServiciosService {
 
 
   //Método para validar el inicio de sesión
-  validarLogin (usuario:string, password:string){
+  validarLogin (usuario:string, password:string, form:any){
     let queryParams = new HttpParams();
     queryParams = queryParams.append('usuario', usuario);
     queryParams = queryParams.append('password', password);
-
-    console.log('test de servicio');
-    console.log(queryParams);
-    //let items = Object.assign({},form);
+   // let u = { "usuario": usuario};
+    //let p = {"password":password};
+   // let items = Object.assign(u,p);
     let url = `${environment.urlApiLogin}`;
-    return this.http.post(url, {params:queryParams}).pipe(
-      tap((result:any) => (this.clientes = result)),
+    return this.http.post(url,'', {params:queryParams}).pipe(
+      tap((result:any) => (this.login = result)),
       map((result:any) => result)
     );
   }

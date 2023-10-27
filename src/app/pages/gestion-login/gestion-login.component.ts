@@ -46,7 +46,7 @@ export class GestionLoginComponent implements OnInit{
     console.log( this.formLogin.get('user').value);
     console.log( this.formLogin.get('pass').value);
 
-    this.serviceLogin.validarLogin(this.formLogin.get('user').value, this.formLogin.get('pass').value).subscribe(
+    this.serviceLogin.validarLogin(this.formLogin.get('user').value, this.formLogin.get('pass').value, this.formLogin).subscribe(
 
       (resu:any)=>{
         console.log('Entra aquí')
